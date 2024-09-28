@@ -1,1 +1,1 @@
-# spring-rest-api-exception-lib
+# Spring Rest API Exception Library
