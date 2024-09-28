@@ -1,5 +1,6 @@
 package com.cuciuc.denis.libraries.java.spring.rest.api.exception;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
@@ -25,7 +26,9 @@ public class ApiExceptionHandler {
    */
   @ExceptionHandler(ApiException.class)
   public ResponseEntity<ApiErrorResponse> handleException(ApiException e) {
-    return ResponseEntity.status(e.getError().getHttpStatus())
-        .body(new ApiErrorResponse(e.getError().getErrorCode(), e.getError().getErrorMessage()));
+    HttpStatus status = e.getError().getHttpStatus();
+    ApiErrorResponse response =
+        new ApiErrorResponse(e.getError().getCode(), e.getError().getMessage(), e.getDescription());
+    return ResponseEntity.status(status).body(response);
   }
 }

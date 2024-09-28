@@ -18,27 +18,53 @@ import org.springframework.http.HttpStatus;
  * @author Denis Cuciuc
  * @since 0.0.1
  */
-public enum ApiError {
+public class ApiError {
 
-  /** An unknown error occurred. */
-  UNKNOWN(0, "Unknown error", HttpStatus.INTERNAL_SERVER_ERROR),
+  public static final ApiError UNKNOWN =
+      new ApiError(0, "Unknown error", HttpStatus.INTERNAL_SERVER_ERROR);
 
-  /** The requested entity was not found in the database. */
-  ENTITY_NOT_FOUND(1, "Entity not found", HttpStatus.NOT_FOUND),
+  public static final ApiError ENTITY_NOT_FOUND =
+      new ApiError(1, "Entity not found", HttpStatus.NOT_FOUND);
 
-  /** The entity already exists in the database. */
-  ENTITY_ALREADY_EXISTS(2, "Entity already exists", HttpStatus.CONFLICT),
+  public static final ApiError ENTITY_ALREADY_EXISTS =
+      new ApiError(2, "Entity already exists", HttpStatus.CONFLICT);
 
-  /** The API key is invalid. */
-  IVALID_API_KEY(3, "Invalid API key", HttpStatus.UNAUTHORIZED);
+  public static final ApiError IVALID_API_KEY =
+      new ApiError(3, "Invalid API key", HttpStatus.UNAUTHORIZED);
 
-  private final int errorCode;
-  private final String errorMessage;
+  public static final ApiError BAD_REQUEST = new ApiError(4, "Bad request", HttpStatus.BAD_REQUEST);
+
+  public static final ApiError UNAUTHORIZED =
+      new ApiError(5, "Unauthorized access", HttpStatus.UNAUTHORIZED);
+
+  public static final ApiError FORBIDDEN =
+      new ApiError(6, "Forbidden access", HttpStatus.FORBIDDEN);
+
+  public static final ApiError METHOD_NOT_ALLOWED =
+      new ApiError(7, "Method not allowed", HttpStatus.METHOD_NOT_ALLOWED);
+
+  public static final ApiError UNSUPPORTED_MEDIA_TYPE =
+      new ApiError(8, "Unsupported media type", HttpStatus.UNSUPPORTED_MEDIA_TYPE);
+
+  public static final ApiError UNPROCESSABLE_ENTITY =
+      new ApiError(9, "Unprocessable entity", HttpStatus.UNPROCESSABLE_ENTITY);
+
+  public static final ApiError TOO_MANY_REQUESTS =
+      new ApiError(10, "Too many requests", HttpStatus.TOO_MANY_REQUESTS);
+
+  public static final ApiError INTERNAL_SERVER_ERROR =
+      new ApiError(11, "Internal server error", HttpStatus.INTERNAL_SERVER_ERROR);
+
+  public static final ApiError SERVICE_UNAVAILABLE =
+      new ApiError(12, "Service unavailable", HttpStatus.SERVICE_UNAVAILABLE);
+
+  private final int code;
+  private final String message;
   private final HttpStatus httpStatus;
 
-  ApiError(int errorCode, String errorMessage, HttpStatus httpStatus) {
-    this.errorCode = errorCode;
-    this.errorMessage = errorMessage;
+  ApiError(int code, String message, HttpStatus httpStatus) {
+    this.code = code;
+    this.message = message;
     this.httpStatus = httpStatus;
   }
 
@@ -47,8 +73,8 @@ public enum ApiError {
    *
    * @return the error code
    */
-  public int getErrorCode() {
-    return errorCode;
+  public int getCode() {
+    return code;
   }
 
   /**
@@ -56,8 +82,8 @@ public enum ApiError {
    *
    * @return the error message
    */
-  public String getErrorMessage() {
-    return errorMessage;
+  public String getMessage() {
+    return message;
   }
 
   /**
@@ -76,5 +102,15 @@ public enum ApiError {
    */
   public ApiException exception() {
     return new ApiException(this);
+  }
+
+  /**
+   * Creates an API exception with this error and a custom description.
+   *
+   * @param message the custom message
+   * @return the API exception
+   */
+  public ApiException exception(String description) {
+    return new ApiException(this, description);
   }
 }
