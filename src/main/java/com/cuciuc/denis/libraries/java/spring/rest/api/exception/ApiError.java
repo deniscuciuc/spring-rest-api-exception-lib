@@ -29,7 +29,7 @@ public class ApiError {
   public static final ApiError ENTITY_ALREADY_EXISTS =
       new ApiError(2, "Entity already exists", HttpStatus.CONFLICT);
 
-  public static final ApiError IVALID_API_KEY =
+  public static final ApiError INVALID_API_KEY =
       new ApiError(3, "Invalid API key", HttpStatus.UNAUTHORIZED);
 
   public static final ApiError BAD_REQUEST = new ApiError(4, "Bad request", HttpStatus.BAD_REQUEST);
@@ -37,26 +37,8 @@ public class ApiError {
   public static final ApiError UNAUTHORIZED =
       new ApiError(5, "Unauthorized access", HttpStatus.UNAUTHORIZED);
 
-  public static final ApiError FORBIDDEN =
-      new ApiError(6, "Forbidden access", HttpStatus.FORBIDDEN);
-
-  public static final ApiError METHOD_NOT_ALLOWED =
-      new ApiError(7, "Method not allowed", HttpStatus.METHOD_NOT_ALLOWED);
-
-  public static final ApiError UNSUPPORTED_MEDIA_TYPE =
-      new ApiError(8, "Unsupported media type", HttpStatus.UNSUPPORTED_MEDIA_TYPE);
-
-  public static final ApiError UNPROCESSABLE_ENTITY =
-      new ApiError(9, "Unprocessable entity", HttpStatus.UNPROCESSABLE_ENTITY);
-
-  public static final ApiError TOO_MANY_REQUESTS =
-      new ApiError(10, "Too many requests", HttpStatus.TOO_MANY_REQUESTS);
-
   public static final ApiError INTERNAL_SERVER_ERROR =
       new ApiError(11, "Internal server error", HttpStatus.INTERNAL_SERVER_ERROR);
-
-  public static final ApiError SERVICE_UNAVAILABLE =
-      new ApiError(12, "Service unavailable", HttpStatus.SERVICE_UNAVAILABLE);
 
   protected final int code;
   protected final String message;
