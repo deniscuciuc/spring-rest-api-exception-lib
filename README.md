@@ -74,4 +74,4 @@ throw CustomApiError.CUSTOM_ERROR.exception();
 
 4. **ApiExceptionHandler**: A Spring `@RestControllerAdvice` that catches `ApiException` instances and returns a standardized error response to the client.
 
-5. **ApiExceptionLibConfig**: A configuration class to enable component scanning for the library.
+5. **ApiExceptionConfig**: A configuration class to enable component scanning for the library.
