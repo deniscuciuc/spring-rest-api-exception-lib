@@ -58,11 +58,11 @@ public class ApiError {
   public static final ApiError SERVICE_UNAVAILABLE =
       new ApiError(12, "Service unavailable", HttpStatus.SERVICE_UNAVAILABLE);
 
-  private final int code;
-  private final String message;
-  private final HttpStatus httpStatus;
+  protected final int code;
+  protected final String message;
+  protected final HttpStatus httpStatus;
 
-  ApiError(int code, String message, HttpStatus httpStatus) {
+  protected ApiError(int code, String message, HttpStatus httpStatus) {
     this.code = code;
     this.message = message;
     this.httpStatus = httpStatus;
