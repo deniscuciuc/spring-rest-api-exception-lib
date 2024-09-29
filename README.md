@@ -4,6 +4,18 @@
 
 The ApiException library is designed to standardize error throwing and handling in REST API applications built with Java Spring. By providing a structured way to manage API errors, this library helps developers maintain consistency in error responses across their applications.
 
+## Maven Dependency
+
+To use this library in you project, add Maven dependency:
+
+```xml
+<dependency>
+  <groupId>com.cuciuc.denis</groupId>
+  <artifactId>spring-rest-api-exception</artifactId>
+  <version>{exception.lib.version}</version>
+</dependency>
+```
+
 ## Configuration
 
 To start using this library, first you need to import the library configuration component:
