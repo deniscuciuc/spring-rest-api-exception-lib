@@ -1,4 +1,4 @@
-package com.cuciuc.denis.libraries.java.spring.rest.api.exception;
+package io.github.deniscuciuc.spring.rest.exception;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -14,4 +14,4 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 @ComponentScan("com.cuciuc.denis.libraries.java.spring.rest.api.exception")
-public class ApiExceptionLibConfig {}
+public class ApiExceptionConfig {}

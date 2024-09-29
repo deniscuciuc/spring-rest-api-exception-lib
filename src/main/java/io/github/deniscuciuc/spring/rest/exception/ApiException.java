@@ -1,4 +1,4 @@
-package com.cuciuc.denis.libraries.java.spring.rest.api.exception;
+package io.github.deniscuciuc.spring.rest.exception;
 
 /**
  * Represents an exception that is thrown by the API.

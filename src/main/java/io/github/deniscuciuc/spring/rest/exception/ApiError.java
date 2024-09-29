@@ -1,4 +1,4 @@
-package com.cuciuc.denis.libraries.java.spring.rest.api.exception;
+package io.github.deniscuciuc.spring.rest.exception;
 
 import org.springframework.http.HttpStatus;
 

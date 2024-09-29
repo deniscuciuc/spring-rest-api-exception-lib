@@ -2,6 +2,10 @@ package com.cuciuc.denis.libraries.java.spring.rest.api.exception;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import io.github.deniscuciuc.spring.rest.exception.ApiError;
+import io.github.deniscuciuc.spring.rest.exception.ApiErrorResponse;
+import io.github.deniscuciuc.spring.rest.exception.ApiException;
+import io.github.deniscuciuc.spring.rest.exception.ApiExceptionHandler;
 import org.junit.jupiter.api.Test;
 import org.springframework.http.ResponseEntity;
 

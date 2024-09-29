@@ -10,7 +10,7 @@ To use this library in you project, add Maven dependency:
 
 ```xml
 <dependency>
-  <groupId>com.cuciuc.denis</groupId>
+  <groupId>io.github.deniscuciuc</groupId>
   <artifactId>spring-rest-api-exception</artifactId>
   <version>{exception.lib.version}</version>
 </dependency>
@@ -22,7 +22,7 @@ To start using this library, first you need to import the library configuration 
 
 ```java
 @Configuration
-@Import(ApiExceptionLibConfig.class)
+@Import(ApiExceptionConfig.class)
 public class Config {
 
 }
@@ -32,7 +32,7 @@ As alternative, you can scan base package of this library:
 
 ```java
 @Configuration
-@ComponentScan("com.cuciuc.denis.libraries.java.spring.rest.api.exception")
+@ComponentScan("io.github.deniscuciuc.spring.rest.exception")
 public class Config {
 
 }
