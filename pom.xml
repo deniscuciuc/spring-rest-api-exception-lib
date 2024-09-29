@@ -12,6 +12,14 @@
   <description>Java spring rest api exception library to reuse in projects</description>
   <url>https://github.com/deniscuciuc/spring-rest-api-exception-lib</url>
 
+  <distributionManagement>
+   <repository>
+     <id>github</id>
+     <name>Spring Rest API Exception Library</name>
+     <url>https://maven.pkg.github.com/deniscuciuc/spring-rest-api-exception-lib</url>
+   </repository>
+</distributionManagement>
+
   <licenses>
     <license>
       <name>Apache License, Version 2.0</name>
