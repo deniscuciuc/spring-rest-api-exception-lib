@@ -4,8 +4,8 @@
 
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.cuciuc.denis.libraries.java.spring</groupId>
-  <artifactId>rest-api-exception-lib</artifactId>
+  <groupId>com.cuciuc.denis</groupId>
+  <artifactId>spring-rest-api-exception</artifactId>
   <version>0.0.1-SNAPSHOT</version>
 
   <name>Spring Rest API Exception Lib</name>
