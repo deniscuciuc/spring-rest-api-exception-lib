@@ -6,7 +6,7 @@
 
   <groupId>io.github.deniscuciuc</groupId>
   <artifactId>spring-rest-api-exception</artifactId>
-  <version>0.0.2</version>
+  <version>0.0.2-SNAPSHOT</version>
 
   <name>Spring Rest API Exception Lib</name>
   <description>Java spring rest api exception library to reuse in projects</description>
