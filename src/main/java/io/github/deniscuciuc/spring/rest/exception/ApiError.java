@@ -14,7 +14,10 @@ import org.springframework.http.HttpStatus;
  * throw ApiError.ENTITY_NOT_FOUND.exception();
  * </pre>
  *
- * @see ApiExceptionHandler, ApiException, ApiErrorResponse
+ * @see ApiExceptionHandler
+ * @see ApiException
+ * @see ApiErrorResponse
+ * @see ApiExceptionConfig
  * @author Denis Cuciuc
  * @since 0.0.1
  */

@@ -11,7 +11,10 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
  * <p>The exceptions are handled by returning an error response containing the error code and
  * message.
  *
- * @see ApiError, ApiException, ApiErrorResponse
+ * @see ApiError
+ * @see ApiException
+ * @see ApiErrorResponse
+ * @see ApiExceptionConfig
  * @author Denis Cuciuc
  * @since 0.0.1
  */

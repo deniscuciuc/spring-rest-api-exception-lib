@@ -5,7 +5,10 @@ package io.github.deniscuciuc.spring.rest.exception;
  *
  * <p>The response contains an error code, a message and a description.
  *
- * @see ApiError, ApiExceptionHandler, ApiException
+ * @see ApiError
+ * @see ApiException
+ * @see ApiExceptionHandler
+ * @see ApiExceptionConfig
  * @author Denis Cuciuc
  * @since 0.0.1
  */

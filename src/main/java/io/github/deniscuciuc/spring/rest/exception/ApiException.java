@@ -5,7 +5,10 @@ package io.github.deniscuciuc.spring.rest.exception;
  *
  * <p>The exception contains an error object.
  *
- * @see ApiError, ApiExceptionHandler, ApiErrorResponse
+ * @see ApiError
+ * @see ApiExceptionHandler
+ * @see ApiErrorResponse
+ * @see ApiExceptionConfig
  * @author Denis Cuciuc
  * @since 0.0.1
  */

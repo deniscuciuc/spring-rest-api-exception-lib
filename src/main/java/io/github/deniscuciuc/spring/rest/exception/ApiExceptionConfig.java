@@ -8,7 +8,10 @@ import org.springframework.context.annotation.Configuration;
  *
  * <p>This class is used to enable component scanning for the library.
  *
- * @see ApiError, ApiErrorResponse, ApiException, ApiExceptionHandler
+ * @see ApiError
+ * @see ApiException
+ * @see ApiErrorResponse
+ * @see ApiExceptionHandler
  * @author Denis Cuciuc
  * @since 0.0.1
  */
