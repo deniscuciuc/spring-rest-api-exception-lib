@@ -42,7 +42,7 @@ public class Config {
 This library is very simple to use, just throw exception via already defined errors:
 
 ```java
-throw CustomApiError.ENTITY_ALREADY_EXISTS.exception();
+throw ApiError.ENTITY_ALREADY_EXISTS.exception();
 ```
 
 Or create your own custom errors holder class to throw all API errors via this class:
